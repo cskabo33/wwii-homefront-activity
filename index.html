@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWII Home Front — American History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--soil:#3d2b1f;--paper:#f5f0e8;--paper-dark:#e8e0cc;--paper-aged:#d4c9a8;--ink:#1a1208;--ink-light:#3d2e18;--red:#8b1a1a;--green-dark:#2d4a1e;--green-mid:#4a7c32;--cream:#faf6ed;--border:#8b7355;--amber:#c17f24;--blue-dark:#1a3a5c;}
+body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:var(--ink);min-height:100vh;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);}
+.header{background:var(--paper);border-bottom:4px solid var(--soil);text-align:center;position:relative;overflow:hidden;}
+.header::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 10px,rgba(0,0,0,0.015) 10px,rgba(0,0,0,0.015) 11px);}
+.header-inner{position:relative;z-index:1;padding:36px 20px 28px;}
+.badge{display:inline-block;background:var(--red);color:var(--paper);font-family:"Special Elite",monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:4px 16px;margin-bottom:12px;}
+h1{font-family:"Playfair Display",serif;font-size:clamp(28px,5vw,54px);font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:8px;}
+h1 span{color:var(--red);}
+.sub{font-family:"Special Elite",monospace;font-size:13px;color:var(--ink-light);letter-spacing:1px;margin-bottom:16px;}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;}
+.divider::before,.divider::after{content:"";flex:1;max-width:140px;height:1px;background:var(--border);}
+.intro{font-size:13px;color:var(--ink-light);max-width:600px;margin:0 auto;line-height:1.8;}
+.main{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+.framing{background:var(--cream);border:1px solid var(--paper-aged);border-left:4px solid var(--amber);padding:14px 18px;margin-bottom:24px;border-radius:0 2px 2px 0;}
+.framing-title{font-family:"Special Elite",monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+.framing-text{font-size:11px;line-height:1.8;color:var(--ink-light);}
+.unit-label{font-family:"Special Elite",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:20px;text-align:center;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-bottom:28px;}
+.card{background:var(--paper);border:2px solid var(--paper-aged);position:relative;text-decoration:none;display:block;transition:transform 0.15s,box-shadow 0.15s;}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,0.04) 24px,rgba(0,0,0,0.04) 25px);}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.35);}
+.card-inner{position:relative;z-index:1;}
+.card-hd{padding:20px 22px 14px;border-bottom:2px solid var(--paper-aged);}
+.num{display:inline-block;font-family:"Special Elite",monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;margin-bottom:10px;border-radius:2px;}
+.num.g{background:var(--green-dark);color:var(--paper);}
+.num.b{background:var(--blue-dark);color:var(--paper);}
+.card-title{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:4px;}
+.card-sub{font-family:"Special Elite",monospace;font-size:10px;color:#7a6040;letter-spacing:1px;}
+.card-bd{padding:16px 22px 20px;}
+.card-desc{font-size:12px;line-height:1.8;color:var(--ink-light);margin-bottom:14px;}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
+.tag{font-family:"Special Elite",monospace;font-size:9px;padding:3px 8px;border-radius:2px;border:1px solid var(--paper-aged);color:var(--ink-light);background:var(--cream);}
+.cta{display:inline-flex;align-items:center;gap:8px;font-family:"Special Elite",monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border-radius:2px;color:var(--paper);}
+.cta.g{background:var(--green-dark);}
+.cta.b{background:var(--blue-dark);}
+.emoji{font-size:32px;float:right;margin:-4px 0 0 12px;line-height:1;}
+.fams{background:var(--paper);border:2px solid var(--paper-aged);position:relative;margin-bottom:20px;}
+.fams::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,0.04) 24px,rgba(0,0,0,0.04) 25px);}
+.fams-inner{position:relative;z-index:1;padding:18px 22px 20px;}
+.fams-title{font-family:"Playfair Display",serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.fams-sub{font-size:11px;color:var(--ink-light);font-style:italic;margin-bottom:14px;}
+.fams-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;}
+.fam{background:var(--cream);border:1px solid var(--paper-aged);border-radius:2px;padding:8px 10px;}
+.fam-name{font-family:"Playfair Display",serif;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.fam-loc{font-family:"Special Elite",monospace;font-size:9px;color:#7a6040;}
+.fam-note{font-size:9px;color:var(--ink-light);margin-top:3px;font-style:italic;line-height:1.4;}
+.footer{text-align:center;padding:20px;font-family:"Special Elite",monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div class="badge">&#9733; American History &middot; 9th Grade &#9733;</div>
+    <h1>The <span>Home Front</span></h1>
+    <p class="sub">World War II &middot; 1941&ndash;1945</p>
+    <div class="divider"><span>&#10022;</span></div>
+    <p class="intro">During World War II, the war was not only fought on the battlefield. Every American family faced new challenges at home &mdash; rationing, food shortages, and the call to sacrifice for the war effort. Complete both activities using your assigned family scenario.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="framing">
+    <div class="framing-title">A Note Before You Begin</div>
+    <div class="framing-text">The five family scenarios in these activities are based on real groups of Americans who lived through World War II. Some scenarios reflect serious injustices &mdash; including racial segregation, forced relocation, and unequal access to resources. These differences are intentional and historically accurate. Pay attention to how your family&rsquo;s experience compares to others. The home front effort was not equally shared by all Americans, and that is part of the history worth understanding.</div>
+  </div>
+  <div class="unit-label">&#9733; &nbsp; Choose an Activity &nbsp; &#9733;</div>
+  <div class="cards">
+    <a class="card" href="victory_garden.html">
+      <div class="card-inner">
+        <div class="card-hd"><span class="num g">Activity 1</span><span class="emoji">&#127807;</span><div class="card-title">Victory Garden Planner</div><div class="card-sub">Planning &middot; Nutrition &middot; Civic Duty</div></div>
+        <div class="card-bd">
+          <p class="card-desc">Design a Victory Garden for your family&rsquo;s backyard plot. Choose your crops carefully &mdash; you have limited space, and your family&rsquo;s nutrition depends on what you plant.</p>
+          <div class="tags"><span class="tag">10&times;10 grid</span><span class="tag">100 sq ft</span><span class="tag">10 crops</span><span class="tag">Nutrition tracking</span><span class="tag">Reflection questions</span></div>
+          <span class="cta g">Start Planting &#8594;</span>
+        </div>
+      </div>
+    </a>
+    <a class="card" href="ration_book.html">
+      <div class="card-inner">
+        <div class="card-hd"><span class="num b">Activity 2</span><span class="emoji">&#127978;</span><div class="card-title">Ration Book Activity</div><div class="card-sub">Budgeting &middot; Trade-offs &middot; Sacrifice</div></div>
+        <div class="card-bd">
+          <p class="card-desc">Visit the Piggly Wiggly with your ration book. You have $2.00 and 40 ration points to plan a full day of meals. Prices from a Raleigh, NC newspaper &mdash; March 1943.</p>
+          <div class="tags"><span class="tag">40 grocery items</span><span class="tag">Real 1943 prices</span><span class="tag">$2.00 budget</span><span class="tag">40 ration points</span><span class="tag">Reflection questions</span></div>
+          <span class="cta b">Start Shopping &#8594;</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="fams">
+    <div class="fams-inner">
+      <div class="fams-title">Your Family Scenarios</div>
+      <div class="fams-sub">Each student is assigned one family. Use the same family for both activities.</div>
+      <div class="fams-grid">
+        <div class="fam"><div class="fam-name">The Kowalski Family</div><div class="fam-loc">Cleveland, OH</div><div class="fam-note">Family of 5. Mom works the factory day shift. Dad is overseas.</div></div>
+        <div class="fam"><div class="fam-name">The Mart&iacute;nez Family</div><div class="fam-loc">San Antonio, TX</div><div class="fam-note">Family of 4. Hot climate limits garden crops. Tighter cash budget.</div></div>
+        <div class="fam"><div class="fam-name">The Yamamoto Family</div><div class="fam-loc">Portland, OR</div><div class="fam-note">Family of 4. Facing possible relocation in early 1942.</div></div>
+        <div class="fam"><div class="fam-name">The Johnson Family</div><div class="fam-loc">Harlem, NYC</div><div class="fam-note">Single mother, 2 kids. Half-sized garden plot. Higher grocery prices.</div></div>
+        <div class="fam"><div class="fam-name">The O&rsquo;Brien Family</div><div class="fam-loc">Rural Vermont</div><div class="fam-note">Farm family of 6. Already grow staples. Focus on vitamins and nutrition.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">American History &middot; WWII Home Front Unit &middot; Prices sourced from the News and Observer, Raleigh NC, March 1943</div>
+</body>
+</html>
