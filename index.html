@@ -13,120 +13,104 @@
   --green-dark:#2d4a1e;--green-mid:#4a7c32;--cream:#faf6ed;--border:#8b7355;
   --amber:#c17f24;--blue-dark:#1a3a5c;
 }
-body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:var(--ink);min-height:100vh;
+body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:var(--ink);min-height:100vh;
   background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px),
   repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);}
-
-/* PAGE SYSTEM */
-.page{display:none;}
-.page.active{display:block;}
-
-/* NAV BAR */
+.page{display:none;}.page.active{display:block;}
 .navbar{background:var(--soil);border-bottom:2px solid var(--amber);padding:8px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:200;}
-.nav-back{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--paper-aged);background:none;border:1px solid rgba(255,255,255,0.2);padding:4px 12px;cursor:pointer;border-radius:2px;transition:all 0.12s;}
+.nav-back{font-family:"Special Elite",monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--paper-aged);background:none;border:1px solid rgba(255,255,255,0.2);padding:4px 12px;cursor:pointer;border-radius:2px;}
 .nav-back:hover{background:rgba(255,255,255,0.1);color:var(--paper);}
-.nav-title{font-family:'Special Elite',monospace;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;}
-.nav-home{margin-left:auto;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--amber);background:none;border:1px solid var(--amber);padding:4px 12px;cursor:pointer;border-radius:2px;transition:all 0.12s;}
+.nav-title{font-family:"Special Elite",monospace;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;}
+.nav-home{margin-left:auto;font-family:"Special Elite",monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--amber);background:none;border:1px solid var(--amber);padding:4px 12px;cursor:pointer;border-radius:2px;}
 .nav-home:hover{background:var(--amber);color:var(--soil);}
-
-/* HOME PAGE */
 .home-header{background:var(--paper);border-bottom:4px solid var(--soil);text-align:center;position:relative;overflow:hidden;}
-.home-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 10px,rgba(0,0,0,0.015) 10px,rgba(0,0,0,0.015) 11px);}
+.home-header::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 10px,rgba(0,0,0,0.015) 10px,rgba(0,0,0,0.015) 11px);}
 .home-header-inner{position:relative;z-index:1;padding:36px 20px 28px;}
-.header-badge{display:inline-block;background:var(--red);color:var(--paper);font-family:'Special Elite',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:4px 16px;margin-bottom:12px;}
-.home-header h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,54px);font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:8px;}
+.header-badge{display:inline-block;background:var(--red);color:var(--paper);font-family:"Special Elite",monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:4px 16px;margin-bottom:12px;}
+.home-header h1{font-family:"Playfair Display",serif;font-size:clamp(28px,5vw,54px);font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:8px;}
 .home-header h1 span{color:var(--red);}
-.home-header-sub{font-family:'Special Elite',monospace;font-size:13px;color:var(--ink-light);letter-spacing:1px;margin-bottom:16px;}
+.home-header-sub{font-family:"Special Elite",monospace;font-size:13px;color:var(--ink-light);letter-spacing:1px;margin-bottom:16px;}
 .home-divider{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;}
-.home-divider::before,.home-divider::after{content:'';flex:1;max-width:140px;height:1px;background:var(--border);}
+.home-divider::before,.home-divider::after{content:"";flex:1;max-width:140px;height:1px;background:var(--border);}
 .home-divider span{font-size:18px;color:var(--border);}
 .home-intro{font-size:13px;color:var(--ink-light);max-width:600px;margin:0 auto;line-height:1.8;}
-
-/* FRAMING NOTE */
 .framing-note{background:var(--cream);border-left:4px solid var(--amber);border:1px solid var(--paper-aged);border-left:4px solid var(--amber);padding:14px 18px;margin:0 auto 20px;max-width:860px;border-radius:0 2px 2px 0;}
-.framing-note-title{font-family:'Special Elite',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+.framing-note-title{font-family:"Special Elite",monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
 .framing-note-text{font-size:11px;line-height:1.8;color:var(--ink-light);}
-
 .home-main{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
-.unit-label{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:20px;text-align:center;}
+.unit-label{font-family:"Special Elite",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:20px;text-align:center;}
 .activities{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-bottom:28px;}
-
 .activity-card{background:var(--paper);border:2px solid var(--paper-aged);position:relative;cursor:pointer;display:block;transition:transform 0.15s,box-shadow 0.15s;}
-.activity-card::before{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,0.04) 24px,rgba(0,0,0,0.04) 25px);}
+.activity-card::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,0.04) 24px,rgba(0,0,0,0.04) 25px);}
 .activity-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.35);}
 .card-inner{position:relative;z-index:1;}
 .card-header{padding:20px 22px 14px;border-bottom:2px solid var(--paper-aged);}
-.card-num{display:inline-block;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;margin-bottom:10px;border-radius:2px;}
+.card-num{display:inline-block;font-family:"Special Elite",monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;margin-bottom:10px;border-radius:2px;}
 .card-num.green{background:var(--green-dark);color:var(--paper);}
 .card-num.blue{background:var(--blue-dark);color:var(--paper);}
-.card-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:4px;}
-.card-subtitle{font-family:'Special Elite',monospace;font-size:10px;color:#7a6040;letter-spacing:1px;}
+.card-title{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:4px;}
+.card-subtitle{font-family:"Special Elite",monospace;font-size:10px;color:#7a6040;letter-spacing:1px;}
 .card-body{padding:16px 22px 20px;}
 .card-desc{font-size:12px;line-height:1.8;color:var(--ink-light);margin-bottom:14px;}
 .card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
-.tag{font-family:'Special Elite',monospace;font-size:9px;letter-spacing:0.5px;padding:3px 8px;border-radius:2px;border:1px solid var(--paper-aged);color:var(--ink-light);background:var(--cream);}
-.card-cta{display:inline-flex;align-items:center;gap:8px;font-family:'Special Elite',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border-radius:2px;color:var(--paper);}
+.tag{font-family:"Special Elite",monospace;font-size:9px;letter-spacing:0.5px;padding:3px 8px;border-radius:2px;border:1px solid var(--paper-aged);color:var(--ink-light);background:var(--cream);}
+.card-cta{display:inline-flex;align-items:center;gap:8px;font-family:"Special Elite",monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border-radius:2px;color:var(--paper);}
 .card-cta.green{background:var(--green-dark);}
 .card-cta.blue{background:var(--blue-dark);}
 .card-emoji{font-size:32px;float:right;margin:-4px 0 0 12px;line-height:1;}
-
 .families{background:var(--paper);border:2px solid var(--paper-aged);position:relative;margin-bottom:20px;}
-.families::before{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,0.04) 24px,rgba(0,0,0,0.04) 25px);}
+.families::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,0.04) 24px,rgba(0,0,0,0.04) 25px);}
 .families-inner{position:relative;z-index:1;padding:18px 22px 20px;}
-.families-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.families-title{font-family:"Playfair Display",serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:4px;}
 .families-sub{font-size:11px;color:var(--ink-light);font-style:italic;margin-bottom:14px;}
 .families-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;}
 .family-chip{background:var(--cream);border:1px solid var(--paper-aged);border-radius:2px;padding:8px 10px;}
-.family-name{font-family:'Playfair Display',serif;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;}
-.family-loc{font-family:'Special Elite',monospace;font-size:9px;color:#7a6040;letter-spacing:0.5px;}
+.family-name{font-family:"Playfair Display",serif;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.family-loc{font-family:"Special Elite",monospace;font-size:9px;color:#7a6040;letter-spacing:0.5px;}
 .family-note{font-size:9px;color:var(--ink-light);margin-top:3px;font-style:italic;line-height:1.4;}
-.footer{text-align:center;padding:20px;font-family:'Special Elite',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:1px;}
+.footer{text-align:center;padding:20px;font-family:"Special Elite",monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:1px;}
 </style>
 </head>
 <body>
 
-<!-- NAV (hidden on home) -->
 <div class="navbar" id="navbar" style="display:none;">
-  <button class="nav-back" onclick="showPage('home')">← Back</button>
+  <button class="nav-back" onclick="showPage('home')">&#8592; Back</button>
   <span class="nav-title" id="navTitle"></span>
-  <button class="nav-home" onclick="showPage('home')">⌂ Home</button>
+  <button class="nav-home" onclick="showPage('home')">&#8962; Home</button>
 </div>
 
-<!-- HOME PAGE -->
+<!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-header">
     <div class="home-header-inner">
-      <div class="header-badge">★ American History · 9th Grade ★</div>
+      <div class="header-badge">&#9733; American History &middot; 9th Grade &#9733;</div>
       <h1>The <span>Home Front</span></h1>
-      <p class="home-header-sub">World War II · 1941–1945</p>
-      <div class="home-divider"><span>✦</span></div>
-      <p class="home-intro">During World War II, the war wasn't only fought on the battlefield. Every American family faced new challenges at home — rationing, food shortages, and the call to sacrifice for the war effort. Complete both activities below using your assigned family scenario.</p>
+      <p class="home-header-sub">World War II &middot; 1941&ndash;1945</p>
+      <div class="home-divider"><span>&#10022;</span></div>
+      <p class="home-intro">During World War II, the war was not only fought on the battlefield. Every American family faced new challenges at home &mdash; rationing, food shortages, and the call to sacrifice for the war effort. Complete both activities below using your assigned family scenario.</p>
     </div>
   </div>
   <div class="home-main">
-
     <div class="framing-note">
       <div class="framing-note-title">A Note Before You Begin</div>
-      <div class="framing-note-text">The five family scenarios in these activities are based on real groups of Americans who lived through World War II. Some scenarios reflect serious injustices — including racial segregation, forced relocation, and unequal access to resources. These differences are intentional and historically accurate. As you work through the activities, pay attention to how your family's experience compares to others. The home front effort was not equally shared by all Americans, and that is part of the history worth understanding.</div>
+      <div class="framing-note-text">The five family scenarios in these activities are based on real groups of Americans who lived through World War II. Some scenarios reflect serious injustices &mdash; including racial segregation, forced relocation, and unequal access to resources. These differences are intentional and historically accurate. As you work through the activities, pay attention to how your family&rsquo;s experience compares to others. The home front effort was not equally shared by all Americans, and that is part of the history worth understanding.</div>
     </div>
-
-    <div class="unit-label">★ &nbsp; Choose an Activity &nbsp; ★</div>
-
+    <div class="unit-label">&#9733; &nbsp; Choose an Activity &nbsp; &#9733;</div>
     <div class="activities">
       <div class="activity-card" onclick="showPage('vg')">
         <div class="card-inner">
           <div class="card-header">
             <span class="card-num green">Activity 1</span>
-            <span class="card-emoji">🌿</span>
+            <span class="card-emoji">&#127807;</span>
             <div class="card-title">Victory Garden Planner</div>
-            <div class="card-subtitle">Planning · Nutrition · Civic Duty</div>
+            <div class="card-subtitle">Planning &middot; Nutrition &middot; Civic Duty</div>
           </div>
           <div class="card-body">
-            <p class="card-desc">Design a Victory Garden for your family's backyard plot. Choose your crops carefully — you have limited space, and your family's nutrition depends on what you plant. Some families face restrictions based on climate, time, or access.</p>
+            <p class="card-desc">Design a Victory Garden for your family&rsquo;s backyard plot. Choose your crops carefully &mdash; you have limited space, and your family&rsquo;s nutrition depends on what you plant. Some families face restrictions based on climate, time, or access.</p>
             <div class="card-tags">
-              <span class="tag">10×10 grid</span><span class="tag">100 sq ft</span><span class="tag">10 crops</span><span class="tag">Nutrition tracking</span><span class="tag">Reflection questions</span>
+              <span class="tag">10&times;10 grid</span><span class="tag">100 sq ft</span><span class="tag">10 crops</span><span class="tag">Nutrition tracking</span><span class="tag">Reflection questions</span>
             </div>
-            <span class="card-cta green">Start Planting →</span>
+            <span class="card-cta green">Start Planting &#8594;</span>
           </div>
         </div>
       </div>
@@ -134,42 +118,40 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
         <div class="card-inner">
           <div class="card-header">
             <span class="card-num blue">Activity 2</span>
-            <span class="card-emoji">🏪</span>
+            <span class="card-emoji">&#127978;</span>
             <div class="card-title">Ration Book Activity</div>
-            <div class="card-subtitle">Budgeting · Trade-offs · Sacrifice</div>
+            <div class="card-subtitle">Budgeting &middot; Trade-offs &middot; Sacrifice</div>
           </div>
           <div class="card-body">
-            <p class="card-desc">Visit the Piggly Wiggly with your ration book. You have $2.00 and 40 ration points to plan a full day of meals. Prices and point values are taken directly from a Raleigh, NC newspaper — March 1943.</p>
+            <p class="card-desc">Visit the Piggly Wiggly with your ration book. You have $2.00 and 40 ration points to plan a full day of meals. Prices and point values are taken directly from a Raleigh, NC newspaper &mdash; March 1943.</p>
             <div class="card-tags">
               <span class="tag">40 grocery items</span><span class="tag">Real 1943 prices</span><span class="tag">$2.00 budget</span><span class="tag">40 ration points</span><span class="tag">Reflection questions</span>
             </div>
-            <span class="card-cta blue">Start Shopping →</span>
+            <span class="card-cta blue">Start Shopping &#8594;</span>
           </div>
         </div>
       </div>
     </div>
-
     <div class="families">
       <div class="families-inner">
         <div class="families-title">Your Family Scenarios</div>
         <div class="families-sub">Each student is assigned one family. Use the same family for both activities.</div>
         <div class="families-grid">
           <div class="family-chip"><div class="family-name">The Kowalski Family</div><div class="family-loc">Cleveland, OH</div><div class="family-note">Family of 5. Mom works the factory day shift. Dad is overseas.</div></div>
-          <div class="family-chip"><div class="family-name">The Martínez Family</div><div class="family-loc">San Antonio, TX</div><div class="family-note">Family of 4. Hot climate limits garden crops. Tighter cash budget.</div></div>
+          <div class="family-chip"><div class="family-name">The Mart&iacute;nez Family</div><div class="family-loc">San Antonio, TX</div><div class="family-note">Family of 4. Hot climate limits garden crops. Tighter cash budget.</div></div>
           <div class="family-chip"><div class="family-name">The Yamamoto Family</div><div class="family-loc">Portland, OR</div><div class="family-note">Family of 4. Facing possible relocation in early 1942.</div></div>
           <div class="family-chip"><div class="family-name">The Johnson Family</div><div class="family-loc">Harlem, NYC</div><div class="family-note">Single mother, 2 kids. Half-sized garden plot. Higher grocery prices.</div></div>
-          <div class="family-chip"><div class="family-name">The O'Brien Family</div><div class="family-loc">Rural Vermont</div><div class="family-note">Farm family of 6. Already grow staples. Focus on vitamins and nutrition.</div></div>
+          <div class="family-chip"><div class="family-name">The O&rsquo;Brien Family</div><div class="family-loc">Rural Vermont</div><div class="family-note">Farm family of 6. Already grow staples. Focus on vitamins and nutrition.</div></div>
         </div>
       </div>
     </div>
-
   </div>
-  <div class="footer">American History · WWII Home Front Unit · Prices sourced from the News and Observer, Raleigh NC, March 1943</div>
+  <div class="footer">American History &middot; WWII Home Front Unit &middot; Prices sourced from the News and Observer, Raleigh NC, March 1943</div>
 </div>
 
-<!-- VICTORY GARDEN PAGE -->
+<!-- VICTORY GARDEN -->
 <div class="page" id="page-vg">
-<style id="vg-styles">
+<style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   :root{
     --soil:#3d2b1f;--paper:#f5f0e8;--paper-dark:#e8e0cc;--paper-aged:#d4c9a8;
@@ -370,7 +352,7 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
       <div class="panel-inner">
         <div class="panel-title"><span>📋</span> Family Scenario</div>
         <div class="scenario-body">
-          <select class="scenario-select" id="scenarioSelect" onchange="applyScenario()">
+          <select class="scenario-select" id="scenarioSelect" onchange="VG.applyScenario()">
             <option value="kowalski">The Kowalski Family — Cleveland, OH</option>
             <option value="martinez">The Martínez Family — San Antonio, TX</option>
             <option value="yamamoto">The Yamamoto Family — Portland, OR</option>
@@ -405,7 +387,7 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
         <div class="grid-panel">
           <div class="grid-meta">
             <span class="grid-meta-label">Click a crop, then click the grid to plant · Plants auto-fill their sq ft</span>
-            <button class="clear-btn" onclick="clearGrid()">✕ Clear All</button>
+            <button class="clear-btn" onclick="VG.clearGrid()">✕ Clear All</button>
           </div>
           <div class="col-labels" id="colLabels"></div>
           <div style="position:relative;">
@@ -544,7 +526,7 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
 
 <div class="print-bar">
   <button class="print-btn" onclick="window.print()">🖨 Print My Garden</button>
-  <button class="print-btn secondary" onclick="loadExample()">Load Example Garden</button>
+  <button class="print-btn secondary" onclick="VG.loadExample()">Load Example Garden</button>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -695,7 +677,7 @@ function buildCropList(){
         <div class="crop-detail">${shapeStr}</div>
       </div>
     </button>`;
-  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
+  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="VG.selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
   if(s.restrictNote) el.innerHTML+=`<p style="font-size:9px;color:#8b1a1a;font-style:italic;padding:5px 3px 0;line-height:1.6;">${s.restrictNote}</p>`;
 }
 
@@ -1106,7 +1088,10 @@ selectCrop(CROPS[0].id);renderCropInfo(CROPS[0]);renderReflectQuestions();
 // Keep reflect summary name in sync
 document.getElementById('studentName').addEventListener('input',renderReflectSummary);
 </script>
-<script id="vg-script">
+<script>
+(function() {
+
+(function() {
 
 const COLS=10, ROWS=10;
 
@@ -1246,7 +1231,7 @@ function buildCropList(){
     const ok=isCropAllowed(c.id);
     const shapeStr=c.shape[0]===c.shape[1]?`${c.sqft} sq ft`:`${c.shape[0]}×${c.shape[1]} block (${c.sqft} sq ft)`;
     return `<button class="crop-btn${c.id===selectedCrop&&ok?' active':''}${!ok?' disabled':''}" id="cbtn-${c.id}"
-      onclick="${ok?`selectCrop('${c.id}')`:`showToast('${c.label} is not available for this family.')`}"
+      onclick="${ok?`VG.selectCrop('${c.id}')`:`VG.showToast('${c.label} is not available for this family.')`}"
       style="${!ok?'opacity:0.35;cursor:not-allowed;':''}">
       <span class="crop-swatch" style="background:${c.color}">${c.icon}</span>
       <div>
@@ -1254,7 +1239,7 @@ function buildCropList(){
         <div class="crop-detail">${shapeStr}</div>
       </div>
     </button>`;
-  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
+  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="VG.selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
   if(s.restrictNote) el.innerHTML+=`<p style="font-size:9px;color:#8b1a1a;font-style:italic;padding:5px 3px 0;line-height:1.6;">${s.restrictNote}</p>`;
 }
 
@@ -1659,18 +1644,31 @@ function showToast(msg){
   setTimeout(()=>t.classList.remove('show'),2500);
 }
 
-// Init
-buildCropList();buildGrid();applyScenario();
-selectCrop(CROPS[0].id);renderCropInfo(CROPS[0]);renderReflectQuestions();
-// Keep reflect summary name in sync
-document.getElementById('studentName').addEventListener('input',renderReflectSummary);
 
+
+// Expose to window for inline handlers
+window.VG = {
+  selectCrop, applyScenario, clearGrid, loadExample,
+  switchTab, buildCropList, buildGrid, onCell,
+  onCellHover, clearPreview, renderReflectQuestions
+};
+if(typeof buildCropList==='function'){buildCropList();buildGrid();applyScenario();selectCrop(CROPS[0].id);renderCropInfo(CROPS[0]);renderReflectQuestions();document.getElementById('studentName').addEventListener('input',renderReflectSummary);}
+})();
+
+// Expose for inline handlers
+window.VG = { selectCrop, applyScenario, clearGrid, loadExample, switchTab,
+  buildCropList, buildGrid, onCell, onCellHover, clearPreview, renderReflectQuestions, showToast };
+// Init
+buildCropList(); buildGrid(); applyScenario();
+selectCrop(CROPS[0].id); renderCropInfo(CROPS[0]); renderReflectQuestions();
+document.getElementById('studentName').addEventListener('input', renderReflectSummary);
+})();
 </script>
 </div>
 
-<!-- RATION BOOK PAGE -->
+<!-- RATION BOOK -->
 <div class="page" id="page-rb">
-<style id="rb-styles">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --soil:#3d2b1f;--paper:#f5f0e8;--paper-dark:#e8e0cc;--paper-aged:#d4c9a8;
@@ -1862,7 +1860,7 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
         </div>
         <div style="padding:0 14px 12px;">
           <div style="font-size:9px;font-family:'Special Elite',monospace;color:#9a845a;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Family Scenario</div>
-          <select class="scenario-select" id="scenarioSelect" onchange="applyScenario()" style="margin-bottom:0;">
+          <select class="scenario-select" id="scenarioSelect" onchange="RB.applyScenario()" style="margin-bottom:0;">
             <option value="kowalski">The Kowalski Family — Cleveland, OH</option>
             <option value="martinez">The Martínez Family — San Antonio, TX</option>
             <option value="yamamoto">The Yamamoto Family — Portland, OR</option>
@@ -1909,12 +1907,12 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
         <div class="panel-title"><span>🏪</span> Piggly Wiggly — March 1943</div>
         <div class="store-panel-inner">
           <div class="meal-tabs">
-            <button class="meal-tab active" id="tab-breakfast" onclick="switchMeal('breakfast',this)">☀️ Breakfast <span class="tab-count" id="cnt-breakfast" style="display:none">0</span></button>
-            <button class="meal-tab" id="tab-lunch" onclick="switchMeal('lunch',this)">🥪 Lunch <span class="tab-count" id="cnt-lunch" style="display:none">0</span></button>
-            <button class="meal-tab" id="tab-dinner" onclick="switchMeal('dinner',this)">🍽 Dinner <span class="tab-count" id="cnt-dinner" style="display:none">0</span></button>
-            <button class="meal-tab" id="tab-snacks" onclick="switchMeal('snacks',this)">🍎 Snacks <span class="tab-count" id="cnt-snacks" style="display:none">0</span></button>
+            <button class="meal-tab active" id="tab-breakfast" onclick="RB.switchMeal('breakfast',this)">☀️ Breakfast <span class="tab-count" id="cnt-breakfast" style="display:none">0</span></button>
+            <button class="meal-tab" id="tab-lunch" onclick="RB.switchMeal('lunch',this)">🥪 Lunch <span class="tab-count" id="cnt-lunch" style="display:none">0</span></button>
+            <button class="meal-tab" id="tab-dinner" onclick="RB.switchMeal('dinner',this)">🍽 Dinner <span class="tab-count" id="cnt-dinner" style="display:none">0</span></button>
+            <button class="meal-tab" id="tab-snacks" onclick="RB.switchMeal('snacks',this)">🍎 Snacks <span class="tab-count" id="cnt-snacks" style="display:none">0</span></button>
           </div>
-          <input class="store-search" id="storeSearch" placeholder="Search items..." oninput="renderStore()"/>
+          <input class="store-search" id="storeSearch" placeholder="Search items..." oninput="RB.renderStore()"/>
           <div class="store-grid" id="storeGrid"></div>
         </div>
       </div>
@@ -2034,7 +2032,7 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
 
 <div class="print-bar">
   <button class="print-btn" onclick="window.print()">🖨 Print My Ration Book</button>
-  <button class="print-btn secondary" onclick="clearAll()">✕ Start Over</button>
+  <button class="print-btn secondary" onclick="RB.clearAll()">✕ Start Over</button>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -2205,7 +2203,7 @@ function renderStore(){
     const price=itemPrice(item);
     const s=getScenario();
     const isFree=s.freeItems&&s.freeItems.includes(item.id);
-    return `<div class="item-card${inMeal?' in-meal':''}" onclick="toggleItem('${item.id}')">
+    return `<div class="item-card${inMeal?' in-meal':''}" onclick="RB.toggleItem('${item.id}')">
       <button class="item-add${inMeal?' added':''}" onclick="event.stopPropagation();toggleItem('${item.id}')">${inMeal?'✓':'+'}</button>
       <div class="item-name">${item.name}</div>
       <div class="item-meta">
@@ -2279,7 +2277,7 @@ function renderMealPlan(){
         <span class="meal-item-vals">
           <span class="meal-item-pts">${item.points}pt</span>
           <span class="meal-item-cost">$${price.toFixed(2)}</span>
-          <button class="meal-item-remove" onclick="removeItem('${m}','${item.id}')">✕</button>
+          <button class="meal-item-remove" onclick="RB.removeItem('${m}','${item.id}')">✕</button>
         </span>
       </div>`;
     });
@@ -2376,7 +2374,10 @@ renderStore();
 renderMealPlan();
 renderReflectQuestions();
 </script>
-<script id="rb-script">
+<script>
+(function() {
+
+(function() {
 
 const ITEMS=[
   {id:'apples',      name:'Apples',          price:0.33, points:20, unit:'2 lbs'},
@@ -2544,8 +2545,8 @@ function renderStore(){
     const price=itemPrice(item);
     const s=getScenario();
     const isFree=s.freeItems&&s.freeItems.includes(item.id);
-    return `<div class="item-card${inMeal?' in-meal':''}" onclick="toggleItem('${item.id}')">
-      <button class="item-add${inMeal?' added':''}" onclick="event.stopPropagation();toggleItem('${item.id}')">${inMeal?'✓':'+'}</button>
+    return `<div class="item-card${inMeal?' in-meal':''}" onclick="RB.toggleItem('${item.id}')">
+      <button class="item-add${inMeal?' added':''}" onclick="event.stopPropagation();RB.toggleItem('${item.id}')">${inMeal?'✓':'+'}</button>
       <div class="item-name">${item.name}</div>
       <div class="item-meta">
         <span class="item-price">${isFree?'FREE':'$'+price.toFixed(2)}</span>
@@ -2618,7 +2619,7 @@ function renderMealPlan(){
         <span class="meal-item-vals">
           <span class="meal-item-pts">${item.points}pt</span>
           <span class="meal-item-cost">$${price.toFixed(2)}</span>
-          <button class="meal-item-remove" onclick="removeItem('${m}','${item.id}')">✕</button>
+          <button class="meal-item-remove" onclick="RB.removeItem('${m}','${item.id}')">✕</button>
         </span>
       </div>`;
     });
@@ -2708,13 +2709,23 @@ function showToast(msg){
   setTimeout(()=>t.classList.remove('show'),2500);
 }
 
-// Init
-document.getElementById('studentName').addEventListener('input',updateReflectSummary);
-applyScenario();
-renderStore();
-renderMealPlan();
-renderReflectQuestions();
 
+
+// Expose to window for inline handlers
+window.RB = {
+  applyScenario, switchMeal, toggleItem, removeItem,
+  clearAll, renderStore, renderReflectQuestions
+};
+if(typeof applyScenario==='function'){document.getElementById('studentName').addEventListener('input',updateReflectSummary);applyScenario();renderStore();renderMealPlan();renderReflectQuestions();}
+})();
+
+// Expose for inline handlers
+window.RB = { applyScenario, switchMeal, toggleItem, removeItem, clearAll, renderStore,
+  renderReflectQuestions, showToast };
+// Init
+document.getElementById('studentName').addEventListener('input', updateReflectSummary);
+applyScenario(); renderStore(); renderMealPlan(); renderReflectQuestions();
+})();
 </script>
 </div>
 
@@ -2723,17 +2734,16 @@ function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   window.scrollTo(0, 0);
-  const navbar = document.getElementById('navbar');
-  const navTitle = document.getElementById('navTitle');
+  var navbar = document.getElementById('navbar');
+  var navTitle = document.getElementById('navTitle');
   if (id === 'home') {
     navbar.style.display = 'none';
     navTitle.textContent = '';
   } else {
     navbar.style.display = 'flex';
-    navTitle.textContent = id === 'vg' ? '🌿 Victory Garden Planner' : '🏪 Ration Book Activity';
+    navTitle.textContent = id === 'vg' ? 'Victory Garden Planner' : 'Ration Book Activity';
   }
 }
-// Init
 showPage('home');
 </script>
 </body>
