@@ -7,15 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --soil:#3d2b1f;--paper:#f5f0e8;--paper-dark:#e8e0cc;--paper-aged:#d4c9a8;
-  --ink:#1a1208;--ink-light:#3d2e18;--red:#8b1a1a;
-  --green-dark:#2d4a1e;--green-mid:#4a7c32;--cream:#faf6ed;--border:#8b7355;
-  --amber:#c17f24;--blue-dark:#1a3a5c;
-}
-body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:var(--ink);min-height:100vh;
-  background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px),
-  repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);}
+:root{--soil:#3d2b1f;--paper:#f5f0e8;--paper-dark:#e8e0cc;--paper-aged:#d4c9a8;--ink:#1a1208;--ink-light:#3d2e18;--red:#8b1a1a;--green-dark:#2d4a1e;--green-mid:#4a7c32;--cream:#faf6ed;--border:#8b7355;--amber:#c17f24;--blue-dark:#1a3a5c;}
+body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:var(--ink);min-height:100vh;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);}
 .page{display:none;}.page.active{display:block;}
 .navbar{background:var(--soil);border-bottom:2px solid var(--amber);padding:8px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:200;}
 .nav-back{font-family:"Special Elite",monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--paper-aged);background:none;border:1px solid rgba(255,255,255,0.2);padding:4px 12px;cursor:pointer;border-radius:2px;}
@@ -34,7 +27,7 @@ body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:
 .home-divider::before,.home-divider::after{content:"";flex:1;max-width:140px;height:1px;background:var(--border);}
 .home-divider span{font-size:18px;color:var(--border);}
 .home-intro{font-size:13px;color:var(--ink-light);max-width:600px;margin:0 auto;line-height:1.8;}
-.framing-note{background:var(--cream);border-left:4px solid var(--amber);border:1px solid var(--paper-aged);border-left:4px solid var(--amber);padding:14px 18px;margin:0 auto 20px;max-width:860px;border-radius:0 2px 2px 0;}
+.framing-note{background:var(--cream);border:1px solid var(--paper-aged);border-left:4px solid var(--amber);padding:14px 18px;margin:0 auto 20px;max-width:860px;border-radius:0 2px 2px 0;}
 .framing-note-title{font-family:"Special Elite",monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
 .framing-note-text{font-size:11px;line-height:1.8;color:var(--ink-light);}
 .home-main{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
@@ -79,7 +72,6 @@ body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:
   <button class="nav-home" onclick="showPage('home')">&#8962; Home</button>
 </div>
 
-<!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-header">
     <div class="home-header-inner">
@@ -99,34 +91,20 @@ body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:
     <div class="activities">
       <div class="activity-card" onclick="showPage('vg')">
         <div class="card-inner">
-          <div class="card-header">
-            <span class="card-num green">Activity 1</span>
-            <span class="card-emoji">&#127807;</span>
-            <div class="card-title">Victory Garden Planner</div>
-            <div class="card-subtitle">Planning &middot; Nutrition &middot; Civic Duty</div>
-          </div>
+          <div class="card-header"><span class="card-num green">Activity 1</span><span class="card-emoji">&#127807;</span><div class="card-title">Victory Garden Planner</div><div class="card-subtitle">Planning &middot; Nutrition &middot; Civic Duty</div></div>
           <div class="card-body">
-            <p class="card-desc">Design a Victory Garden for your family&rsquo;s backyard plot. Choose your crops carefully &mdash; you have limited space, and your family&rsquo;s nutrition depends on what you plant. Some families face restrictions based on climate, time, or access.</p>
-            <div class="card-tags">
-              <span class="tag">10&times;10 grid</span><span class="tag">100 sq ft</span><span class="tag">10 crops</span><span class="tag">Nutrition tracking</span><span class="tag">Reflection questions</span>
-            </div>
+            <p class="card-desc">Design a Victory Garden for your family&rsquo;s backyard plot. Choose your crops carefully &mdash; you have limited space, and your family&rsquo;s nutrition depends on what you plant.</p>
+            <div class="card-tags"><span class="tag">10&times;10 grid</span><span class="tag">100 sq ft</span><span class="tag">10 crops</span><span class="tag">Nutrition tracking</span><span class="tag">Reflection questions</span></div>
             <span class="card-cta green">Start Planting &#8594;</span>
           </div>
         </div>
       </div>
       <div class="activity-card" onclick="showPage('rb')">
         <div class="card-inner">
-          <div class="card-header">
-            <span class="card-num blue">Activity 2</span>
-            <span class="card-emoji">&#127978;</span>
-            <div class="card-title">Ration Book Activity</div>
-            <div class="card-subtitle">Budgeting &middot; Trade-offs &middot; Sacrifice</div>
-          </div>
+          <div class="card-header"><span class="card-num blue">Activity 2</span><span class="card-emoji">&#127978;</span><div class="card-title">Ration Book Activity</div><div class="card-subtitle">Budgeting &middot; Trade-offs &middot; Sacrifice</div></div>
           <div class="card-body">
-            <p class="card-desc">Visit the Piggly Wiggly with your ration book. You have $2.00 and 40 ration points to plan a full day of meals. Prices and point values are taken directly from a Raleigh, NC newspaper &mdash; March 1943.</p>
-            <div class="card-tags">
-              <span class="tag">40 grocery items</span><span class="tag">Real 1943 prices</span><span class="tag">$2.00 budget</span><span class="tag">40 ration points</span><span class="tag">Reflection questions</span>
-            </div>
+            <p class="card-desc">Visit the Piggly Wiggly with your ration book. You have $2.00 and 40 ration points to plan a full day of meals. Prices from a Raleigh, NC newspaper &mdash; March 1943.</p>
+            <div class="card-tags"><span class="tag">40 grocery items</span><span class="tag">Real 1943 prices</span><span class="tag">$2.00 budget</span><span class="tag">40 ration points</span><span class="tag">Reflection questions</span></div>
             <span class="card-cta blue">Start Shopping &#8594;</span>
           </div>
         </div>
@@ -149,7 +127,6 @@ body{background:var(--soil);font-family:"Libre Baskerville",Georgia,serif;color:
   <div class="footer">American History &middot; WWII Home Front Unit &middot; Prices sourced from the News and Observer, Raleigh NC, March 1943</div>
 </div>
 
-<!-- VICTORY GARDEN -->
 <div class="page" id="page-vg">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -677,7 +654,7 @@ function buildCropList(){
         <div class="crop-detail">${shapeStr}</div>
       </div>
     </button>`;
-  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="VG.selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
+  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
   if(s.restrictNote) el.innerHTML+=`<p style="font-size:9px;color:#8b1a1a;font-style:italic;padding:5px 3px 0;line-height:1.6;">${s.restrictNote}</p>`;
 }
 
@@ -1090,9 +1067,6 @@ document.getElementById('studentName').addEventListener('input',renderReflectSum
 </script>
 <script>
 (function() {
-
-(function() {
-
 const COLS=10, ROWS=10;
 
 const CROPS=[
@@ -1239,7 +1213,7 @@ function buildCropList(){
         <div class="crop-detail">${shapeStr}</div>
       </div>
     </button>`;
-  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="VG.selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
+  }).join('')+`<button class="erase-btn" id="cbtn-erase" onclick="selectCrop('erase')">✕ &nbsp;Erase plant</button>`;
   if(s.restrictNote) el.innerHTML+=`<p style="font-size:9px;color:#8b1a1a;font-style:italic;padding:5px 3px 0;line-height:1.6;">${s.restrictNote}</p>`;
 }
 
@@ -1645,20 +1619,11 @@ function showToast(msg){
 }
 
 
-
-// Expose to window for inline handlers
-window.VG = {
-  selectCrop, applyScenario, clearGrid, loadExample,
-  switchTab, buildCropList, buildGrid, onCell,
-  onCellHover, clearPreview, renderReflectQuestions
-};
-if(typeof buildCropList==='function'){buildCropList();buildGrid();applyScenario();selectCrop(CROPS[0].id);renderCropInfo(CROPS[0]);renderReflectQuestions();document.getElementById('studentName').addEventListener('input',renderReflectSummary);}
-})();
-
-// Expose for inline handlers
-window.VG = { selectCrop, applyScenario, clearGrid, loadExample, switchTab,
-  buildCropList, buildGrid, onCell, onCellHover, clearPreview, renderReflectQuestions, showToast };
-// Init
+window.VG = { selectCrop: selectCrop, applyScenario: applyScenario, clearGrid: clearGrid,
+  loadExample: loadExample, switchTab: switchTab, buildCropList: buildCropList,
+  buildGrid: buildGrid, onCell: onCell, onCellHover: onCellHover,
+  clearPreview: clearPreview, renderReflectQuestions: renderReflectQuestions,
+  showToast: showToast };
 buildCropList(); buildGrid(); applyScenario();
 selectCrop(CROPS[0].id); renderCropInfo(CROPS[0]); renderReflectQuestions();
 document.getElementById('studentName').addEventListener('input', renderReflectSummary);
@@ -1666,7 +1631,6 @@ document.getElementById('studentName').addEventListener('input', renderReflectSu
 </script>
 </div>
 
-<!-- RATION BOOK -->
 <div class="page" id="page-rb">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -1907,10 +1871,10 @@ body{background:var(--soil);font-family:'Libre Baskerville',Georgia,serif;color:
         <div class="panel-title"><span>🏪</span> Piggly Wiggly — March 1943</div>
         <div class="store-panel-inner">
           <div class="meal-tabs">
-            <button class="meal-tab active" id="tab-breakfast" onclick="RB.switchMeal('breakfast',this)">☀️ Breakfast <span class="tab-count" id="cnt-breakfast" style="display:none">0</span></button>
-            <button class="meal-tab" id="tab-lunch" onclick="RB.switchMeal('lunch',this)">🥪 Lunch <span class="tab-count" id="cnt-lunch" style="display:none">0</span></button>
-            <button class="meal-tab" id="tab-dinner" onclick="RB.switchMeal('dinner',this)">🍽 Dinner <span class="tab-count" id="cnt-dinner" style="display:none">0</span></button>
-            <button class="meal-tab" id="tab-snacks" onclick="RB.switchMeal('snacks',this)">🍎 Snacks <span class="tab-count" id="cnt-snacks" style="display:none">0</span></button>
+            <button class="meal-tab active" id="tab-breakfast" onclick="switchMeal('breakfast',this)">☀️ Breakfast <span class="tab-count" id="cnt-breakfast" style="display:none">0</span></button>
+            <button class="meal-tab" id="tab-lunch" onclick="switchMeal('lunch',this)">🥪 Lunch <span class="tab-count" id="cnt-lunch" style="display:none">0</span></button>
+            <button class="meal-tab" id="tab-dinner" onclick="switchMeal('dinner',this)">🍽 Dinner <span class="tab-count" id="cnt-dinner" style="display:none">0</span></button>
+            <button class="meal-tab" id="tab-snacks" onclick="switchMeal('snacks',this)">🍎 Snacks <span class="tab-count" id="cnt-snacks" style="display:none">0</span></button>
           </div>
           <input class="store-search" id="storeSearch" placeholder="Search items..." oninput="RB.renderStore()"/>
           <div class="store-grid" id="storeGrid"></div>
@@ -2203,7 +2167,7 @@ function renderStore(){
     const price=itemPrice(item);
     const s=getScenario();
     const isFree=s.freeItems&&s.freeItems.includes(item.id);
-    return `<div class="item-card${inMeal?' in-meal':''}" onclick="RB.toggleItem('${item.id}')">
+    return `<div class="item-card${inMeal?' in-meal':''}" onclick="toggleItem('${item.id}')">
       <button class="item-add${inMeal?' added':''}" onclick="event.stopPropagation();toggleItem('${item.id}')">${inMeal?'✓':'+'}</button>
       <div class="item-name">${item.name}</div>
       <div class="item-meta">
@@ -2277,7 +2241,7 @@ function renderMealPlan(){
         <span class="meal-item-vals">
           <span class="meal-item-pts">${item.points}pt</span>
           <span class="meal-item-cost">$${price.toFixed(2)}</span>
-          <button class="meal-item-remove" onclick="RB.removeItem('${m}','${item.id}')">✕</button>
+          <button class="meal-item-remove" onclick="removeItem('${m}','${item.id}')">✕</button>
         </span>
       </div>`;
     });
@@ -2376,9 +2340,6 @@ renderReflectQuestions();
 </script>
 <script>
 (function() {
-
-(function() {
-
 const ITEMS=[
   {id:'apples',      name:'Apples',          price:0.33, points:20, unit:'2 lbs'},
   {id:'bisquick',    name:'Bisquick',         price:0.37, points:18, unit:'box'},
@@ -2710,19 +2671,10 @@ function showToast(msg){
 }
 
 
-
-// Expose to window for inline handlers
-window.RB = {
-  applyScenario, switchMeal, toggleItem, removeItem,
-  clearAll, renderStore, renderReflectQuestions
-};
-if(typeof applyScenario==='function'){document.getElementById('studentName').addEventListener('input',updateReflectSummary);applyScenario();renderStore();renderMealPlan();renderReflectQuestions();}
-})();
-
-// Expose for inline handlers
-window.RB = { applyScenario, switchMeal, toggleItem, removeItem, clearAll, renderStore,
-  renderReflectQuestions, showToast };
-// Init
+window.RB = { applyScenario: applyScenario, switchMeal: switchMeal,
+  toggleItem: toggleItem, removeItem: removeItem, clearAll: clearAll,
+  renderStore: renderStore, renderReflectQuestions: renderReflectQuestions,
+  showToast: showToast };
 document.getElementById('studentName').addEventListener('input', updateReflectSummary);
 applyScenario(); renderStore(); renderMealPlan(); renderReflectQuestions();
 })();
@@ -2731,18 +2683,13 @@ applyScenario(); renderStore(); renderMealPlan(); renderReflectQuestions();
 
 <script>
 function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
   document.getElementById('page-' + id).classList.add('active');
   window.scrollTo(0, 0);
-  var navbar = document.getElementById('navbar');
-  var navTitle = document.getElementById('navTitle');
-  if (id === 'home') {
-    navbar.style.display = 'none';
-    navTitle.textContent = '';
-  } else {
-    navbar.style.display = 'flex';
-    navTitle.textContent = id === 'vg' ? 'Victory Garden Planner' : 'Ration Book Activity';
-  }
+  var nb = document.getElementById('navbar');
+  var nt = document.getElementById('navTitle');
+  if (id === 'home') { nb.style.display = 'none'; nt.textContent = ''; }
+  else { nb.style.display = 'flex'; nt.textContent = id === 'vg' ? 'Victory Garden Planner' : 'Ration Book Activity'; }
 }
 showPage('home');
 </script>
